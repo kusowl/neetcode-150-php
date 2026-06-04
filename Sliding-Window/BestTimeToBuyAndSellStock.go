@@ -16,7 +16,7 @@ func maxProfit(prices []int) int {
 
 	maximumProfit := difference[0]
 	currentProfit := difference[0]
-	for i := 1; i < len(difference); i++ {
+	for i := 1;  < len(difference); i++ {
 		currentProfit = max(difference[i], currentProfit+difference[i])
 		maximumProfit = max(maximumProfit, currentProfit)
 	}
