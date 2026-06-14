@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 func maxProfit(prices []int) int {
 	if len(prices) == 0 {
 		return 0
@@ -16,7 +12,7 @@ func maxProfit(prices []int) int {
 
 	maximumProfit := difference[0]
 	currentProfit := difference[0]
-	for i := 1;  < len(difference); i++ {
+	for i := 1; i < len(difference); i++ {
 		currentProfit = max(difference[i], currentProfit+difference[i])
 		maximumProfit = max(maximumProfit, currentProfit)
 	}
@@ -28,8 +24,8 @@ func maxProfit(prices []int) int {
 	return maximumProfit
 }
 
-func main() {
-	prices := [6]int{7, 1, 5, 3, 6, 4}
-	result := maxProfit(prices[:])
-	fmt.Println("Max Profit:", result)
-}
+// func main() {
+// 	prices := [6]int{7, 1, 5, 3, 6, 4}
+// 	result := maxProfit(prices[:])
+// 	fmt.Println("Max Profit:", result)
+// }
